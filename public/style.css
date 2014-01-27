@@ -1,0 +1,8 @@
+.chatWrap {
+    height: 300px;
+    background-color: #e8e8e8;
+}
+
+.chatWrap ul {
+    list-style-type: none;
+}

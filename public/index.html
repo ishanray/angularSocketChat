@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="chatApp">
+<head>
+    <title>Chat App</title>
+    <link rel="stylesheet" href="foundation/css/foundation.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="angular/angular.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Chat</h1>
+    <div ng-controller="ChatCtrl">
+        <div class="chatWrap">
+            <ul>
+                <li ng-repeat="msg in msgs track by $index">{{msg}}</li>
+            </ul>
+        </div>
+        <form ng-submit="sendMsg()">
+            <input type="text" ng-model="chat.msg"/>
+        </form>
+    </div>
+</body>
+</html>
